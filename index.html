@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSCI571-HW1</title>
+	<style>
+		body {
+			background-image: url("vitruvian-man-dim.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+		.tabs {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		.tabs ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.tabs li {
+			display: inline-block;
+			margin-right: 20px;
+			border-bottom: 3px solid transparent;
+		}
+		.tabs li:hover, .tabs li.active {
+			border-bottom-color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>CSCI571-HW1</h1>
+	<div class="tabs">
+		<ul>
+			<li><a href="HW1-a.html" class="active">HW1-a</a></li>
+			<li><a href="HW1-b.html">HW1-b</a></li>
+			<li><a href="HW1-c.html">HW1-c</a></li>
+		</ul>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
