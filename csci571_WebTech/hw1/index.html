@@ -2,36 +2,63 @@
 <html>
 <head>
 	<title>CSCI571-HW1</title>
-	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			background-image: url("images/index_bk.jpg");
+			background-size: cover;
+			opacity: 0.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		.title {
+			text-align: center;
+			font-weight: bold;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		.tab-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.blob {
+			position: relative;
+			width: 200px;
+			height: 50px;
+			border-radius: 10px;
+			border: 2px solid #333;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+
+		.blob:hover {
+			cursor: pointer;
+		}
+
+		.tab-link {
+			text-decoration: none;
+			color: #fff;
+			font-weight: bold;
+		}
+	</style>
 </head>
 <body>
-	<div class="background-container">
-		<img src="images/index_bk.jpg" alt="Background Image" class="background-image">
-	</div>
-
-	<h1 class="centered-title">CSCI571-HW1</h1>
-
-	<div class="tabs-container">
-		<div class="tab-container" style="display: block;">
-			<a href="HW1-a.html" class="tab-link">HW1-a</a>
-			<span class="blob-container">
-				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-a</span>
-			</span>
-		</div>
-
-		<div class="tab-container" style="display: none;">
-			<a href="HW1-b.html" class="tab-link">HW1-b</a>
-			<span class="blob-container">
-				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-b</span>
-			</span>
-		</div>
-
-		<div class="tab-container" style="display: none;">
-			<a href="HW1-c.html" class="tab-link">HW1-c</a>
-			<span class="blob-container">
-				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-c</span>
-			</span>
-		</div>
+	<div class="title">CSCI571-HW1</div>
+	<div class="tab-container">
+		<a href="HW1-a.html" class="blob tab-link" style="background-color: rgb(255, 0, 0);">
+			<b>Tab A</b>
+		</a>
+		<a href="HW1-b.html" class="blob tab-link" style="background-color: rgb(0, 255, 0);">
+			<b>Tab B</b>
+		</a>
+		<a href="HW1-c.html" class="blob tab-link" style="background-color: rgb(0, 0, 255);">
+			<b>Tab C</b>
+		</a>
 	</div>
 
 </body>
