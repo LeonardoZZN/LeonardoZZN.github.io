@@ -1,84 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Top 10 Most Famous Supernovae in History</title>
+	<title>With CSS only: The Top 10 Most Famous Supernovae in History</title>
 	<style>
 		body {
 			background-color: #000;
 		}
 
-		#slideshow-container {
+		#slideshow {
 			position: relative;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			width: 400px;
+			height: 300px;
+			border: 10px solid #fff;
+			box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 			padding: 200px;
-			text-align: center;
-			font-size: 0;
 		}
 
-		#slideshow-image {
-			border: solid 2px #fff;
-			box-shadow: rgba(255, 255, 255, .5) 0 0 10px;
-			margin: 20px auto;
-			display: none;
+		#slideshow img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: opacity 3.5s ease-out;
 		}
 
-		#slideshow-caption {
-			color: #fff;
-			font-size: 1.2em;
-			padding-top: 10px;
-			text-align: center;
+		#slideshow img.active {
+			opacity: 1;
 		}
 
-		#slideshow {
-			list-style: none;
-			margin: 0;
-			padding: 0;
+		#slideshow img.fadeout {
+			opacity: 0;
 		}
 
-		#slideshow li {
+		#slideshow img:nth-child(10) {
+			transition: opacity 7s ease-out;
+		}
+
+		#slideshow img:nth-child(10).active {
+			opacity: 1;
+		}
+
+		#title {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			display: none;
-			opacity: 0;
-			transition: opacity 3.5s ease-out, display 3.5s ease-out;
-		}
-
-		#slideshow li.active {
-			display: block;
-			opacity: 1;
-			transition: opacity 3.5s ease-in, display 3.5s ease-in;
-		}
-
-		#slideshow li:last-child {
-			transition: opacity 4s ease-out, display 4s ease-out;
-		}
-
-		#slideshow li.active:last-child {
-			display: block;
-			opacity: 1;
-			transition: opacity 4s ease-in, display 4s ease-in;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			margin-top: 0;
 		}
 	</style>
 </head>
 <body>
-	<h1 id="title">The Top 10 Most Famous Supernovae in History</h1>
-	<div id="slideshow-container">
-		<ul id="slideshow">
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Supernova 1" width="100%" height="auto"><span id="slideshow-caption">Caption for image 1</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Supernova 2" width="100%" height="auto"><span id="slideshow-caption">Caption for image 2</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Supernova 3" width="100%" height="auto"><span id="slideshow-caption">Caption for image 3</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Supernova 4" width="100%" height="auto"><span id="slideshow-caption">Caption for image 4</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Supernova 5" width="100%" height="auto"><span id="slideshow-caption">Caption for image 5</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Supernova 6" width="100%" height="auto"><span id="slideshow-caption">Caption for image 6</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Supernova 7" width="100%" height="auto"><span id="slideshow-caption">Caption for image 7</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 8" width="100%" height="auto"><span id="slideshow-caption">Caption for image 8</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 9" width="100%" height="auto"><span id="slideshow-caption">Caption for image 9</span></li>
-			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 10" width="100%" height="auto"><span id="slideshow-caption">Caption for image 10</span></li>
-		</ul>
+	<h1 id="title">With CSS only: The Top 10 Most Famous Supernovae in History</h1>
+	<div id="slideshow">
+		<img src="image1.jpg" alt="Image 1" class="active">
+		<img src="image2.jpg" alt="Image 2">
+		<img src="image3.jpg" alt="Image 3">
+		<img src="image4.jpg" alt="Image 4">
+		<img src="image5.jpg" alt="Image 5">
+		<img src="image6.jpg" alt="Image 6">
+		<img src="image7.jpg" alt="Image 7">
+		<img src="image8.jpg" alt="Image 8">
+		<img src="image9.jpg" alt="Image 9">
+		<img src="image10.jpg" alt="Image 10" class="fadeout">
 	</div>
 </body>
 </html>
