@@ -4,78 +4,119 @@
 	<title>The Top 10 Most Famous Supernovae in History</title>
 	<style>
 		body {
-			background-color: #000;
-		}
+            background-color: #000;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-		#slideshow-container {
-			position: relative;
-			margin: 0 auto;
-			width: 300px;
-			height: 300px;
-			border: 5px solid #fff;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-		}
+        h1 {
+            margin-top: 20px;
+        }
 
-		#slideshow {
-			position: relative;
-			width: 100%;
-			height: 250px; /* adjust this value to fit the images */
-			overflow: hidden;
-		}
+        .slideshow {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            border: 2px solid white;
+            box-shadow: 0 0 10px white;
+        }
 
-		#slideshow img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			transform: scale(1);
-			transition: transform 2.5s ease-out;
-		}
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
 
-		#slideshow img.current {
-			transform: scale(1) translateZ(-1px);
-		}
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-		#captions {
-			list-style: none;
-			margin: 0;
-			padding: 10px;
-			color: #fff;
-		}
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
 
-		#captions li {
-			margin-bottom: 20px;
-		}
+        /* Animate the slideshow */
+            @keyframes slideShow {
+            0% { opacity: 1; }
+            25% { opacity: 0; }
+            25% { opacity: 1; }
+            50% { opacity: 0; }
+            50% { opacity: 1; }
+            75% { opacity: 0; }
+            75% { opacity: 1; }
+            100% { opacity: 0; }
+        }
 
-		@media screen and (max-width: 500px) {
-			#slideshow-container {
-				width: 200px;
-				height: 200px;
-			}
-		}
+        .slide:nth-child(1) {
+            animation: slideShow 25s infinite;
+        }
+        .slide:nth-child(2) {
+            animation: slideShow 25s infinite;
+            animation-delay: 2.5s;
+        }
+        .slide:nth-child(3) {
+            animation: slideShow 25s infinite;
+            animation-delay: 5s;
+        }
+        /* Repeat for all 10 slides, adjusting the delay for each */
+        .slide:nth-child(4) {
+            animation: slideShow 25s infinite;
+            animation-delay: 7.5s;
+        }
+        .slide:nth-child(5) {
+            animation: slideShow 25s infinite;
+            animation-delay: 10s;
+        }
+        .slide:nth-child(6) {
+            animation: slideShow 25s infinite;
+            animation-delay: 12.5s;
+        }
+        .slide:nth-child(7) {
+            animation: slideShow 25s infinite;
+            animation-delay: 15s;
+        }
+        .slide:nth-child(8) {
+            animation: slideShow 25s infinite;
+            animation-delay: 17.5s;
+        }
+        .slide:nth-child(9) {
+            animation: slideShow 25s infinite;
+            animation-delay: 20s;
+        }
+        .slide:nth-child(10) {
+            animation: slideShow 25s infinite;
+            animation-delay: 22.5s;
+        }
 	</style>
 </head>
 <body>
-	<h1 id="title" style="text-align: center; color: #ffff00;">The Top 10 Most Famous Supernovae in History</h1>
-
-	<div id="slideshow-container">
-		<div id="slideshow">
-			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1" class="current">
-			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Image 2">
-			...
-			<!-- add more images here -->
-			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Image 10">
-		</div>
-
-		<ol id="captions">
-			<li>SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</li>
-			<li>1. SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</li>
-			...
-			<!-- add more captions here -->
-			<li>2. SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</li>
-		</ol>
-	</div>
+  <h1>With CSS only: The Top 10 Most Famous Supernovae in History</h1>
+  <div class="slideshow">
+    <div class="slide">
+      <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Caption 1" />
+      <div class="caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</div>
+    </div>
+    <div class="slide">
+      <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Caption 2" />
+      <div class="caption">1. SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</div>
+    </div>
+    <!-- Repeat for 10 slides -->
+  </div>
 </body>
 </html>
