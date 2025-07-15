@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CSCI571-HW1</title>
-	<style>
-		body {
-			background-image: url("images/index_bk.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-		.tabs {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 20px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		}
-		.tabs ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-		.tabs li {
-			display: inline-block;
-			margin-right: 20px;
-			border-bottom: 3px solid transparent;
-		}
-		.tabs li:hover, .tabs li.active {
-			border-bottom-color: #333;
-		}
-	</style>
-</head>
-<body>
-	<h1>CSCI571-HW1</h1>
-	<div class="tabs">
-		<ul>
-			<li><a href="HW1-a.html" class="active">HW1-a</a></li>
-			<li><a href="HW1-b.html">HW1-b</a></li>
-			<li><a href="HW1-c.html">HW1-c</a></li>
-		</ul>
-	</div>
+    <title>CSCI571-HW1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
 
-	<script src="script.js"></script>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #title {
+            font-size: 3em;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .tab {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+            border: 1px solid #4CAF50; 
+            padding: 1em;
+            width: 20%;
+            position: relative;
+            text-align: center;
+        }
+
+        .tab a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .tab a:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="title">CSCI571-HW1</h2>
+        <div>
+            <a href="HW1-a.html" class="tab">HW1-a</a>
+            <a href="HW1-b.html" class="tab">HW1-b</a> 
+            <a href="HW1-c.html" class="tab">HW1-c</a>
+        </div>
+
+    </div>
+
+    <!-- Image container -->
+    <div id="image-container">
+        <img src="images/index_bk.jpg" alt="Background Image" style="width: 100%; height: 100%;"/>
+    </div>
+
+
+
+
+
 </body>
 </html>
