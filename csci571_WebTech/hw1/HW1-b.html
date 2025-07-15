@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Slideshow with Caption</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>With CSS only: The Top 10 Most Famous Supernovae in History</title>
   <style>
-    body {
+    /* Reset and base styles */
+    * {
       margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .slideshow-container {
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      background-color: #000;
+      height: 100vh;
+      padding: 20px;
     }
 
-    .slideshow {
+    #title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #slideshow-container {
       position: relative;
       width: 800px;
       height: 600px;
-      overflow: hidden;
-      border: 5px solid #333;
+      padding: 200px;
+      border: 2px solid white;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px white;
+      overflow: hidden;
+      background-color: black;
     }
 
     .slide {
@@ -36,11 +47,7 @@
       width: 100%;
       height: 100%;
       opacity: 0;
-      animation: slideShow 3.5s infinite;
-    }
-
-    .slide.active {
-      opacity: 1;
+      animation: slideShow 35s infinite;
     }
 
     .slide img {
@@ -54,29 +61,79 @@
       bottom: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      padding: 10px;
+      color: white;
       text-align: center;
+      padding: 10px;
       font-size: 1.2em;
+      display: none;
     }
 
     @keyframes slideShow {
       0% {
         opacity: 0;
       }
-      25% {
+      10% {
+        opacity: 1;
+      }
+      90% {
         opacity: 1;
       }
       100% {
         opacity: 0;
       }
     }
+
+    /* Apply animation to each slide with staggered delay */
+    .slide:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+      animation-delay: 3.5s;
+    }
+
+    .slide:nth-child(3) {
+      animation-delay: 7s;
+    }
+
+    .slide:nth-child(4) {
+      animation-delay: 10.5s;
+    }
+
+    .slide:nth-child(5) {
+      animation-delay: 14s;
+    }
+
+    .slide:nth-child(6) {
+      animation-delay: 17.5s;
+    }
+
+    .slide:nth-child(7) {
+      animation-delay: 21s;
+    }
+
+    .slide:nth-child(8) {
+      animation-delay: 24.5s;
+    }
+
+    .slide:nth-child(9) {
+      animation-delay: 28s;
+    }
+
+    .slide:nth-child(10) {
+      animation-delay: 31.5s;
+    }
+
+    /* Show caption when image is visible */
+    .slide.active .caption {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <div class="slideshow-container">
-    <div class="slideshow">
-        <div class="slide active">
+  <div id="title">With CSS only: The Top 10 Most Famous Supernovae in History</div>
+  <div id="slideshow-container">
+    <div class="slide">
             <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1">
             <div class="caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</div>
         </div>
@@ -116,7 +173,6 @@
             <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg" alt="Image 3">
             <div class="caption">SN 2006gy: This extremely luminous supernova was observed by NASA and peaked in brightness for over 70 days. It is considered a potential example of a new type of supernova or possibly a pair-instability supernova.</div>
         </div>
-    </div>
   </div>
 </body>
 </html>
