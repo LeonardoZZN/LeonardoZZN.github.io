@@ -1,40 +1,84 @@
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1">
-    <div class="caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Image 2">
-    <div class="caption">SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Image 3">
-    <div class="caption">SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Image 4">
-    <div class="caption">SN 1572 (Tycho's Supernova): Danish astronomer Tycho Brahe meticulously recorded observations of this supernova, also known as Tycho's Nova, in the constellation Cassiopeia. His observations helped challenge the prevailing Aristotelian view of an unchanging celestial sphere.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Image 5">
-    <div class="caption">SN 1604 (Kepler's Supernova): This Type Ia supernova, observed by Johannes Kepler and other astronomers, was the last supernova seen within the Milky Way galaxy that was visible to the naked eye.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Image 6">
-    <div class="caption">Cas A (c. 1680): Although not visually conspicuous due to interstellar dust, Cassiopeia A is the brightest extrasolar radio source in the sky. It is a Type IIb supernova remnant believed to have exploded around 1680.</div>
-</div>
-<div class="slide">
-    <img src=" https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Image 7">
-    <div class="caption">SN 1987A: Located in the Large Magellanic Cloud, this Type II supernova was the closest and most easily observed supernova since 1604. It was intensely studied by modern astronomers and provided crucial insights into core-collapse supernovae, including the detection of a burst of neutrinos at the time of the explosion. Recent observations have revealed evidence for a neutron star at its heart.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Image 8">
-    <div class="caption">SN 1885A: This was the first supernova observed in an external galaxy, the Andromeda Galaxy, marking a significant milestone in extragalactic astronomy.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2015L.jpg" alt="Image 9">
-    <div class="caption">ASASSN-15lh (SN 2015L): Initially classified as the most luminous supernova ever observed, it was 570 billion times brighter than the Sun at its peak. Although its exact nature is still debated, it remains a highly significant event in the study of superluminous supernovae or possibly a tidal disruption event around a supermassive black hole.</div>
-</div>
-<div class="slide">
-    <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg" alt="Image 10">
-    <div class="caption">SN 2006gy: This extremely luminous supernova was observed by NASA and peaked in brightness for over 70 days. It is considered a potential example of a new type of supernova or possibly a pair-instability supernova.</div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Top 10 Most Famous Supernovae in History</title>
+	<style>
+		body {
+			background-color: #000;
+		}
+
+		#slideshow-container {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 200px;
+			text-align: center;
+			font-size: 0;
+		}
+
+		#slideshow-image {
+			border: solid 2px #fff;
+			box-shadow: rgba(255, 255, 255, .5) 0 0 10px;
+			margin: 20px auto;
+			display: none;
+		}
+
+		#slideshow-caption {
+			color: #fff;
+			font-size: 1.2em;
+			padding-top: 10px;
+			text-align: center;
+		}
+
+		#slideshow {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#slideshow li {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: none;
+			opacity: 0;
+			transition: opacity 3.5s ease-out, display 3.5s ease-out;
+		}
+
+		#slideshow li.active {
+			display: block;
+			opacity: 1;
+			transition: opacity 3.5s ease-in, display 3.5s ease-in;
+		}
+
+		#slideshow li:last-child {
+			transition: opacity 4s ease-out, display 4s ease-out;
+		}
+
+		#slideshow li.active:last-child {
+			display: block;
+			opacity: 1;
+			transition: opacity 4s ease-in, display 4s ease-in;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title">The Top 10 Most Famous Supernovae in History</h1>
+	<div id="slideshow-container">
+		<ul id="slideshow">
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Supernova 1" width="100%" height="auto"><span id="slideshow-caption">Caption for image 1</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Supernova 2" width="100%" height="auto"><span id="slideshow-caption">Caption for image 2</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Supernova 3" width="100%" height="auto"><span id="slideshow-caption">Caption for image 3</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Supernova 4" width="100%" height="auto"><span id="slideshow-caption">Caption for image 4</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Supernova 5" width="100%" height="auto"><span id="slideshow-caption">Caption for image 5</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Supernova 6" width="100%" height="auto"><span id="slideshow-caption">Caption for image 6</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Supernova 7" width="100%" height="auto"><span id="slideshow-caption">Caption for image 7</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 8" width="100%" height="auto"><span id="slideshow-caption">Caption for image 8</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 9" width="100%" height="auto"><span id="slideshow-caption">Caption for image 9</span></li>
+			<li><img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Supernova 10" width="100%" height="auto"><span id="slideshow-caption">Caption for image 10</span></li>
+		</ul>
+	</div>
+</body>
+</html>
