@@ -4,175 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>With CSS only: The Top 10 Most Famous Supernovae in History</title>
-  <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 20px;
-    }
-
-    #title {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    #slideshow-container {
-      position: relative;
-      width: 800px;
-      height: 600px;
-      padding: 200px;
-      border: 2px solid white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px white;
-      overflow: hidden;
-      background-color: black;
-    }
-
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      animation: slideShow 35s infinite;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .caption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 1.2em;
-      display: none;
-    }
-
-    @keyframes slideShow {
-      0% {
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    /* Apply animation to each slide with staggered delay */
-    .slide:nth-child(1) {
-      animation-delay: 0s;
-    }
-
-    .slide:nth-child(2) {
-      animation-delay: 3.5s;
-    }
-
-    .slide:nth-child(3) {
-      animation-delay: 7s;
-    }
-
-    .slide:nth-child(4) {
-      animation-delay: 10.5s;
-    }
-
-    .slide:nth-child(5) {
-      animation-delay: 14s;
-    }
-
-    .slide:nth-child(6) {
-      animation-delay: 17.5s;
-    }
-
-    .slide:nth-child(7) {
-      animation-delay: 21s;
-    }
-
-    .slide:nth-child(8) {
-      animation-delay: 24.5s;
-    }
-
-    .slide:nth-child(9) {
-      animation-delay: 28s;
-    }
-
-    .slide:nth-child(10) {
-      animation-delay: 31.5s;
-    }
-
-    /* Show caption when image is visible */
-    .slide.active .caption {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="https://leonardozzn.github.io/csci571_WebTech/hw1/HW1-b-styles.css" />
 </head>
 <body>
-  <div id="title">With CSS only: The Top 10 Most Famous Supernovae in History</div>
-  <div id="slideshow-container">
-    <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1">
-            <div class="caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Image 2">
-            <div class="caption">SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Image 3">
-            <div class="caption">SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Image 3">
-            <div class="caption">SN 1572 (Tycho's Supernova): Danish astronomer Tycho Brahe meticulously recorded observations of this supernova, also known as Tycho's Nova, in the constellation Cassiopeia. His observations helped challenge the prevailing Aristotelian view of an unchanging celestial sphere.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Image 3">
-            <div class="caption">SN 1604 (Kepler's Supernova): This Type Ia supernova, observed by Johannes Kepler and other astronomers, was the last supernova seen within the Milky Way galaxy that was visible to the naked eye.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Image 3">
-            <div class="caption">Cas A (c. 1680): Although not visually conspicuous due to interstellar dust, Cassiopeia A is the brightest extrasolar radio source in the sky. It is a Type IIb supernova remnant believed to have exploded around 1680.</div>
-        </div>
-        <div class="slide">
-            <img src=" https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Image 3">
-            <div class="caption">SN 1987A: Located in the Large Magellanic Cloud, this Type II supernova was the closest and most easily observed supernova since 1604. It was intensely studied by modern astronomers and provided crucial insights into core-collapse supernovae, including the detection of a burst of neutrinos at the time of the explosion. Recent observations have revealed evidence for a neutron star at its heart.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Image 3">
-            <div class="caption">SN 1885A: This was the first supernova observed in an external galaxy, the Andromeda Galaxy, marking a significant milestone in extragalactic astronomy.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2015L.jpg" alt="Image 3">
-            <div class="caption">ASASSN-15lh (SN 2015L): Initially classified as the most luminous supernova ever observed, it was 570 billion times brighter than the Sun at its peak. Although its exact nature is still debated, it remains a highly significant event in the study of superluminous supernovae or possibly a tidal disruption event around a supermassive black hole.</div>
-        </div>
-        <div class="slide">
-            <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg" alt="Image 3">
-            <div class="caption">SN 2006gy: This extremely luminous supernova was observed by NASA and peaked in brightness for over 70 days. It is considered a potential example of a new type of supernova or possibly a pair-instability supernova.</div>
-        </div>
+  <h1>With CSS only: The Top 10 Most Famous Supernovae in History</h1>
+  <div class="slideshow-container">
+    <div class="slideshow">
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Image 2" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Image 3" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Image 4" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Image 5" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Image 6" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Image 7" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Image 8" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Image 9" class="slide" />
+        <img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Image 10" class="slide" />
+    </div>
+    <div class="captions">
+        <p>SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</p>
+        <p>SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</p>
+        <p>SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</p>
+        <p>SN 1572 (Tycho's Supernova): Danish astronomer Tycho Brahe meticulously recorded observations of this supernova, also known as Tycho's Nova, in the constellation Cassiopeia. His observations helped challenge the prevailing Aristotelian view of an unchanging celestial sphere.</p>
+        <p>SN 1604 (Kepler's Supernova): This Type Ia supernova, observed by Johannes Kepler and other astronomers, was the last supernova seen within the Milky Way galaxy that was visible to the naked eye.</p>
+        <p>Cas A (c. 1680): Although not visually conspicuous due to interstellar dust, Cassiopeia A is the brightest extrasolar radio source in the sky. It is a Type IIb supernova remnant believed to have exploded around 1680.</p>
+        <p>SN 1987A: Located in the Large Magellanic Cloud, this Type II supernova was the closest and most easily observed supernova since 1604. It was intensely studied by modern astronomers and provided crucial insights into core-collapse supernovae, including the detection of a burst of neutrinos at the time of the explosion. Recent observations have revealed evidence for a neutron star at its heart.</p>
+        <p>SN 1885A: This was the first supernova observed in an external galaxy, the Andromeda Galaxy, marking a significant milestone in extragalactic astronomy.</p>
+        <p>ASASSN-15lh (SN 2015L): Initially classified as the most luminous supernova ever observed, it was 570 billion times brighter than the Sun at its peak. Although its exact nature is still debated, it remains a highly significant event in the study of superluminous supernovae or possibly a tidal disruption event around a supermassive black hole.</p>
+        <p>SN 2006gy: This extremely luminous supernova was observed by NASA and peaked in brightness for over 70 days. It is considered a potential example of a new type of supernova or possibly a pair-instability supernova.</p>
+    </div>
   </div>
 </body>
 </html>

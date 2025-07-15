@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  border: 2px solid white;
+  overflow: hidden;
+  box-shadow: 0 0 10px white;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  animation: slideShow 35s infinite;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fadeInOut 3.5s ease-in-out forwards;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3.5s; }
+.slide:nth-child(3) { animation-delay: 7s; }
+.slide:nth-child(4) { animation-delay: 10.5s; }
+.slide:nth-child(5) { animation-delay: 14s; }
+.slide:nth-child(6) { animation-delay: 17.5s; }
+.slide:nth-child(7) { animation-delay: 21s; }
+.slide:nth-child(8) { animation-delay: 24.5s; }
+.slide:nth-child(9) { animation-delay: 28s; }
+.slide:nth-child(10) { animation-delay: 31.5s; }
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-100%); }
+  20% { transform: translateX(-100%); }
+  30% { transform: translateX(0); }
+  40% { transform: translateX(0); }
+  50% { transform: translateX(-100%); }
+  60% { transform: translateX(-100%); }
+  70% { transform: translateX(0); }
+  80% { transform: translateX(0); }
+  90% { transform: translateX(-100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.captions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.captions p {
+  display: none;
+}
+
+.captions p:nth-child(1) { animation-delay: 0s; }
+.captions p:nth-child(2) { animation-delay: 3.5s; }
+.captions p:nth-child(3) { animation-delay: 7s; }
+.captions p:nth-child(4) { animation-delay: 10.5s; }
+.captions p:nth-child(5) { animation-delay: 14s; }
+.captions p:nth-child(6) { animation-delay: 17.5s; }
+.captions p:nth-child(7) { animation-delay: 21s; }
+.captions p:nth-child(8) { animation-delay: 24.5s; }
+.captions p:nth-child(9) { animation-delay: 28s; }
+.captions p:nth-child(10) { animation-delay: 31.5s; }
+
+@keyframes captionShow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.captions p {
+  opacity: 0;
+  animation: captionShow 3.5s ease-in-out forwards;
+}
