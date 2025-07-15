@@ -10,11 +10,15 @@
             margin: 0;
             padding: 0;
             overflow: hidden; 
-			background-image: url('images/index_bk.jpg');
+        }
+
+        body::before {
+            background-image: url('images/index_bk.jpg');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: 100% 100%;
-			opacity: 0.01;
+			opacity: 0.1;
+            z-index: -1;
         }
 
         #container {
