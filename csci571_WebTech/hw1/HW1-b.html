@@ -2,77 +2,96 @@
 <html>
 <head>
 	<title>The Top 10 Most Famous Supernovae in History</title>
-	<style type="text/css">
+	<style>
 		body {
-			background-image: url("https://www.hdwallpapers.in/walls/thumbs/dark-space-stars-nightskies-4k-3840x2160.jpg");
+			background-image: url("https://picsum.photos/2000/1000?image=1061"); /* Immersive background */
 			background-size: cover;
 			background-position: center;
 			margin: 0;
 			padding: 0;
 		}
 
-		#slideshow {
+		.slideshow-container {
 			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 800px;
-			height: 600px;
+			width: 80%;
+			margin: 40px auto;
+			padding: 20px;
 			border-radius: 10px;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-			background-color: #fff;
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 		}
 
-		#slideshow img {
+		.slideshow-container img {
 			width: 100%;
-			height: 100%;
+			height: 300px; /* Adjust this value to set the slideshow window height */
+			object-fit: cover;
 			border-radius: 10px;
-			display: none;
+			background-color: #fff;
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 		}
 
-		#slideshow img:first-child {
-			display: block;
-		}
-
-		.captions {
-			position: relative;
-			top: 50%;
+		.slideshow-container .image-caption {
+			position: absolute;
+			bottom: 20px;
 			left: 50%;
-			transform: translate(-50%, -100%);
-			width: 800px;
-			font-size: 24px;
-			color: #333;
-			text-align: center;
+			transform: translateX(-50%);
+			font-size: 18px;
+			color: #fff;
+		}
+
+		/* Animation styles */
+		.fade-out {
+			animation-name: fade-out;
+			animation-duration: 2.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes fade-out {
+			0% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+		.fade-in {
+			animation-name: fade-in;
+			animation-duration: 2.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes fade-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 	</style>
 </head>
-
 <body>
-	<h1 style="text-align: center; padding: 20px;">The Top 10 Most Famous Supernovae in History</h1>
-	<div id="slideshow">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Slide 1">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Slide 2">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Slide 3">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Slide 4">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg" alt="Slide 5">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg" alt="Slide 6">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg" alt="Slide 7">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg" alt="Slide 8">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2015L.jpg" alt="Slide 9">
-		<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn2006gy.jpg" alt="Slide 10">
+	<h1 class="title">With CSS only: The Top 10 Most Famous Supernovae in History</h1>
+	<div class="slideshow-container">
+		<a href="#slide-1" class="image-link active fade-in">
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Supernova 1">
+		</a>
+		<a href="#slide-2" class="image-link fade-out">
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Supernova 2">
+		</a>
+		<a href="#slide-3" class="image-link fade-out">
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Supernova 3">
+		</a>
+		<!-- Add more images here -->
+		<a href="#slide-10" class="image-link fade-out">
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Supernova 10">
+		</a>
 	</div>
-	<div class="captions">
-		<p> Slide caption for slide1 </p>
-		<p> Slide caption for slide2 </p>
-		<p> Slide caption for slide3 </p>
-		<p> Slide caption for slide4 </p>
-		<p> Slide caption for slide5 </p>
-		<p> Slide caption for slide6 </p>
-		<p> Slide caption for slide7 </p>
-		<p> Slide caption for slide8 </p>
-		<p> Slide caption for slide9 </p>
-		<p> Slide caption for slide10 </p>
+	<div class="image-captions">
+		<p id="caption-1">Caption for Supernova 1</p>
+		<p id="caption-2">Caption for Supernova 2</p>
+		<!-- Add more captions here -->
+		<p id="caption-10">Caption for Supernova 10</p>
 	</div>
 </body>
-
 </html>
