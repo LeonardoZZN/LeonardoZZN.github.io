@@ -2,106 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CSS Slideshow</title>
+  <title>Supernova Slideshow</title>
   <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+    /* Fullscreen Centering */
     body {
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #000;
     }
 
-    .slideshow-container {
-        position: relative;
-        width: 800px;
-        height: 600px;
-        overflow: hidden;
+    /* Header */
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 2em;
     }
 
-    .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 3.5s ease-in-out;
-    animation: slide 35s infinite;
+    /* Slideshow Container */
+    .slideshow {
+      width: 80%;
+      height: 60%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: slide 35s infinite;
     }
 
-    .slide:nth-child(1) {
-    animation-delay: 0s;
-    }
-
-    .slide:nth-child(2) {
-    animation-delay: 3.5s;
-    }
-
-    .slide:nth-child(3) {
-    animation-delay: 7s;
-    }
-
-    .slide:nth-child(4) {
-    animation-delay: 10.5s;
-    }
-
-    .slide:nth-child(5) {
-    animation-delay: 14s;
-    }
-
-    .slide:nth-child(6) {
-    animation-delay: 17.5s;
-    }
-
-    .slide:nth-child(7) {
-    animation-delay: 21s;
-    }
-
-    .slide:nth-child(8) {
-    animation-delay: 24.5s;
-    }
-
-    .slide:nth-child(9) {
-    animation-delay: 28s;
-    }
-
-    .slide:nth-child(10) {
-    animation-delay: 31.5s;
-    }
-
+    /* Keyframes to animate background image change */
     @keyframes slide {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+      0%   { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg'); }
+      10%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg'); }
+      20%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg'); }
+      30%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg'); }
+      40%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1604.jpg'); }
+      50%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/casA.jpgg'); }
+      60%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1987A.jpg'); }
+      70%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg'); }
+      80%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg'); }
+      90%  { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1885A.jpg'); }
+      100% { background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg'); }
     }
   </style>
 </head>
 <body>
-  <div class="slideshow-container">
-    <div class="slide" style="background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg');"></div>
-    <div class="slide" style="background-image: url('https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg');"></div>
-    <div class="slide" style="background-image: url('image3.jpg');"></div>
-    <div class="slide" style="background-image: url('image4.jpg');"></div>
-    <div class="slide" style="background-image: url('image5.jpg');"></div>
-    <div class="slide" style="background-image: url('image6.jpg');"></div>
-    <div class="slide" style="background-image: url('image7.jpg');"></div>
-    <div class="slide" style="background-image: url('image8.jpg');"></div>
-    <div class="slide" style="background-image: url('image9.jpg');"></div>
-    <div class="slide" style="background-image: url('image10.jpg');"></div>
-  </div>
+  <h1>The Top 10 Most Famous Supernovae in History</h1>
+  <div class="slideshow"></div>
 </body>
 </html>
