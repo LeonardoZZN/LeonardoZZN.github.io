@@ -1,72 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSCI571-HW1</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; 
-        }
+	<title>CSCI571-HW1-HTML, CSS, and JS</title>
+	<style>
+		body {
+			background-image: linear-gradient(to top, black 50%, #FF9900 50%);
+			background-size: 300px auto;
+			background-position: bottom;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
 
-        body::before {
-            background-image: url('images/index_bk.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            opacity: 0.6;
-        }
+		#tabs {
+			position: relative;
+			top: 100px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+		}
 
-        #container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+		.tab-container {
+			width: 40%;
+			margin: 20px auto;
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, .7);
+			border: solid 1px #000;
+			padding: 20px;
+			position: relative;
+		}
 
-        #title {
-            font-size: 3em; /* Adjust title size as needed */
-            color: #072af1;
-            text-align: center;
-            margin-bottom: 2rem; /* Add spacing below title */
-        }
+		.tab {
+			display: inline-block;
+			margin: 0 20px;
+			font-weight: bold;
+			color: #333;
+		}
 
-        .tab-container {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center; /* Center tabs horizontally */ 
-            width: 100%; 
-        }
+		.tab.active {
+			color: #fff;
+		}
 
-        .tab {
-            font-size: 3em;
-            background-color: transparent;
-            border: 3px solid #FF0000;
-            padding: 15px;
-            text-decoration: none; 
-            color: #1e89f4; /* Adjust tab text color as needed */
-            cursor: pointer;  
-            width: 20%;
-        }
+		.blob-container {
+			width: 40%;
+			margin: 20px auto;
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, .7);
+			border: solid 1px #000;
+			padding: 20px;
+			position: relative;
+		}
 
-        .tab:hover {
-            background-color: #eee;
-        } 
+		.blob {
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0, 0, 0, .5);
+			border-radius: 10px;
+			margin-bottom: 20px;
+			padding-top: 15px;
+			text-align: center;
+			font-size: 18px;
+		}
 
-    </style>
+		.blob:hover {
+			background-color: rgba(255, 0, 0, .5);
+		}
+
+		a.blob-link {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		a.blob-link:hover {
+			color: #ff0000;
+		}
+	</style>
 </head>
 <body>
-    <div id="container">
-        <div id="title">CSCI571-HW1</div>  
-        <div class="tab-container">
-            <a href="HW1-a.html" class="tab">HW1-a</a>
-            <a href="HW1-b.html" class="tab">HW1-b</a>
-            <a href="HW1-c.html" class="tab">HW1-c</a> 
-        </div>
-    </div>
-    
+	<h1 id="title">CSCI571-HW1-HTML, CSS, and JS</h1>
+
+	<div id="tabs">
+		<div class="tab-container">
+			<span class="tab" onclick="setTab(0)">**HW1-a.html**</span>
+			<span class="tab" onclick="setTab(1)">**HW1-b.html**</span>
+			<span class="tab" onclick="setTab(2)">**HW1-c.html**</span>
+		</div>
+
+		<div id="blobs">
+			<div class="blob-container">
+				<div class="blob" data-tab-index="0">
+					<a href="HW1-a.html" target="_blank" class="blob-link">View HW1-a.html</a>
+				</div>
+			</div>
+
+			<div class="blob-container">
+				<div class="blob" data-tab-index="1">
+					<a href="HW1-b.html" target="_blank" class="blob-link">View HW1-b.html</a>
+				</div>
+			</div>
+
+			<div class="blob-container">
+				<div class="blob" data-tab-index="2">
+					<a href="HW1-c.html" target="_blank" class="blob-link">View HW1-c.html</a>
+				</div>
+			</div>
+		</div>
+
+	<script>
+		let activeTab = 0;
+
+		function setTab(index) {
+			document.querySelectorAll('.tab').forEach((tab) => tab.classList.remove('active'));
+			document.querySelectorAll('.blob').forEach((blob) => blob.style.display = 'none');
+
+			document.querySelector(`.tab:nth-child(${index + 1})`).classList.add('active');
+			document.querySelector(`[data-tab-index="${index}"]`).style.display = 'block';
+
+			activeTab = index;
+		}
+
+		setTab(0);
+	</script>
 </body>
 </html>
