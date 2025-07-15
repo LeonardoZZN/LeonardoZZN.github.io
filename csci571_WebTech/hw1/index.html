@@ -1,69 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSCI571-HW1</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #title {
-            font-size: 3em;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .tab {
-            display: flex;
-            flex-direction: column;
-            background: transparent;
-            border: 1px solid #4CAF50; 
-            padding: 1em;
-            width: 20%;
-            position: relative;
-            text-align: center;
-        }
-
-        .tab a {
-            color: white;
-            font-size: 1.5em;
-            text-decoration: none;
-            margin-bottom: 1rem;
-        }
-
-        .tab a:hover {
-            background-color: #4CAF50;
-        }
-    </style>
+	<title>CSCI571-HW1</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h2 id="title">CSCI571-HW1</h2>
-        <div>
-            <a href="HW1-a.html" class="tab">HW1-a</a>
-            <a href="HW1-b.html" class="tab">HW1-b</a> 
-            <a href="HW1-c.html" class="tab">HW1-c</a>
-        </div>
+	<div class="background-container">
+		<img src="images/index_bk.jpg" alt="Background Image" class="background-image">
+	</div>
 
-    </div>
+	<h1 class="centered-title">CSCI571-HW1</h1>
 
-    <!-- Image container -->
-    <div id="image-container">
-        <img src="images/index_bk.jpg" alt="Background Image" style="width: 100%; height: 100%;"/>
-    </div>
+	<div class="tabs-container">
+		<div class="tab-container" style="display: block;">
+			<a href="HW1-a.html" class="tab-link">HW1-a</a>
+			<span class="blob-container">
+				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-a</span>
+			</span>
+		</div>
 
+		<div class="tab-container" style="display: none;">
+			<a href="HW1-b.html" class="tab-link">HW1-b</a>
+			<span class="blob-container">
+				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-b</span>
+			</span>
+		</div>
 
-
-
+		<div class="tab-container" style="display: none;">
+			<a href="HW1-c.html" class="tab-link">HW1-c</a>
+			<span class="blob-container">
+				<span class="blob" style="background-color: #fff; border: 2px solid #000; font-weight: bold;">HW1-c</span>
+			</span>
+		</div>
+	</div>
 
 </body>
 </html>
