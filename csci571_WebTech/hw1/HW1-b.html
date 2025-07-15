@@ -1,108 +1,176 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Top 10 Most Famous Supernovae in History</title>
+	<title>With CSS only: The Top 10 Most Famous Supernovae in History</title>
 	<style>
 		body {
-			background-color: #000080;
-			font-family: Arial, sans-serif;
+			background-color: #000;
 		}
 
 		#slideshow-container {
 			position: relative;
-			margin-top: calc(50vh - 200px);
-			width: 400px;
-			height: 300px;
-			border-radius: 10px;
-			box-shadow: 0px 0px 20px #FFFFFF;
-			background-color: rgba(255, 255, 255, 0.5);
+			text-align: center;
+			color: #fff;
+			margin: 20px auto;
+			width: 800px;
+			height: 600px;
+			border: 10px solid #fff;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 		}
 
 		#slideshow {
 			position: relative;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			transition: opacity 2.5s;
-		}
-
-		#slideshow li {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			padding: 10px;
-			background-color: #FFFFFF;
-			border-radius: 10px;
-			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-			transition: opacity 2.5s;
-		}
-
-		#slideshow li:nth-child(even) {
-			background-color: #FFFFFF;
-		}
-
-		#slideshow li img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			margin: 20px auto;
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		}
+
+		#slideshow img {
+			width: 100%;
+			height: 80vh;
+			margin-bottom: 20px;
 			border-radius: 10px;
 		}
 
 		#slideshow-caption {
-			margin-top: 20px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #fff;
 			font-size: 18px;
-			color: #FFFFFF;
+			margin-bottom: 20px;
 		}
 
 		@keyframes slideshow {
 			0% {
-				opacity: 1;
+				#slideshow img {
+				 opacity: 1;
+			 }
 			}
 			25% {
-				opacity: 0.5;
+				#slideshow img {
+				 opacity: 0.7;
+			 }
 			}
 			50% {
-				opacity: 0.5;
+				#slideshow img {
+				 opacity: 0.3;
+			 }
 			}
 			75% {
-				opacity: 1;
+				#slideshow img {
+				 opacity: 0.7;
+			 }
 			}
 			100% {
-				opacity: 1;
+				#slideshow img {
+				 opacity: 1;
+			 }
 			}
 		}
 
-		#slideshow-container:hover #slideshow {
-			box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+		/* CSS Animations */
+		@-webkit-keyframes slideshow {
+			0% {
+				#slideshow img {
+				 opacity: 1;
+			 }
+			}
+			25% {
+				#slideshow img {
+				 opacity: 0.7;
+			 }
+			}
+			50% {
+				#slideshow img {
+				 opacity: 0.3;
+			 }
+			}
+			75% {
+				#slideshow img {
+				 opacity: 0.7;
+			 }
+			}
+			100% {
+				#slideshow img {
+				 opacity: 1;
+			 }
+			}
+		}
+
+		@-moz-keyframes slideshow {
+			0% {
+				#slideshow img {
+				 opacity: 1;
+			 }
+			}
+			25% {
+				#slideshow img {
+				 opacity: 0.7;
+			 }
+			}
+			50% {
+				#slideshow img {
+				 opacity: 0.3;
+			 }
+			}
+			75% {
+				#slideshow img {
+				 opacity: 0.7;
+			 }
+			}
+			100% {
+				#slideshow img {
+				 opacity: 1;
+			 }
+			}
+		}
+
+		/* End CSS Animations */
+
+		/* Make the slideshow window responsive */
+		@media only screen and (max-width: 800px) {
+			#slideshow-container {
+				width: 600px;
+				height: 500px;
+			}
 		}
 	</style>
 </head>
 <body>
-	<h1 id="title" style="text-align: center;">The Top 10 Most Famous Supernovae in History</h1>
+	<h1 style="color: #FFFF00; font-size: 40px; text-align: center;">With CSS only: The Top 10 Most Famous Supernovae in History</h1>
 	<div id="slideshow-container">
-		<ul id="slideshow">
-			<li>
-				<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Image 1">
-				<p id="slideshow-caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</p>
-			</li>
-			<li>
-				<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Image 2">
-				<p id="slideshow-caption">1. SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</p>
-			</li>
-			<li>
-				<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Image 3">
-				<p id="slideshow-caption">2. SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</p>
-			</li>
-			<!-- Add more images and captions here -->
-			<li>
-				<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1572.jpg" alt="Image 10">
-				<p id="slideshow-caption">3. SN 1572 (Tycho's Supernova): Danish astronomer Tycho Brahe meticulously recorded observations of this supernova, also known as Tycho's Nova, in the constellation Cassiopeia. His observations helped challenge the prevailing Aristotelian view of an unchanging celestial sphere.</p>
-			</li>
-		</ul>
+		<div id="slideshow">
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn185.jpg" alt="Supernova 1" />
+			<p id="slideshow-caption">SN 185: This "guest star" was observed by Chinese astronomers in the Book of Later Han, and might have been recorded in Roman literature. It remained visible in the night sky for eight months. This is believed to be the first supernova for which records exist.</p>
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1006.jpg" alt="Supernova 2" />
+			<p id="slideshow-caption">1. SN 1006: This Type Ia supernova, observed in 1006 AD, was the brightest recorded stellar event in history. Visible worldwide and brighter than Venus, it could even be seen during the day for weeks.</p>
+			<!-- Add the remaining images and captions -->
+			<img src="https://leonardozzn.github.io/csci571_WebTech/hw1/images/sn1054.jpg" alt="Supernova 3" />
+			<p id="slideshow-caption">2. SN 1054 (Crab Nebula): Observed in 1054 AD by Chinese astronomers, this supernova is responsible for creating the Crab Nebula, a prominent supernova remnant. It was incredibly bright, remaining visible during the day for nearly a month and outshining everything but the Moon. Its remnant includes a rapidly spinning neutron star, or pulsar, at its center.</p>
+			<img src="image4.jpg" alt="Supernova 4" />
+			<p id="slideshow-caption">Caption for image 4</p>
+			<img src="image5.jpg" alt="Supernova 5" />
+			<p id="slideshow-caption">Caption for image 5</p>
+			<img src="image6.jpg" alt="Supernova 6" />
+			<p id="slideshow-caption">Caption for image 6</p>
+			<img src="image7.jpg" alt="Supernova 7" />
+			<p id="slideshow-caption">Caption for image 7</p>
+			<img src="image8.jpg" alt="Supernova 8" />
+			<p id="slideshow-caption">Caption for image 8</p>
+			<img src="image9.jpg" alt="Supernova 9" />
+			<p id="slideshow-caption">Caption for image 9</p>
+			<img src="image10.jpg" alt="Supernova 10" />
+			<p id="slideshow-caption">Caption for image 10</p>
+		</div>
 	</div>
 </body>
 </html>
