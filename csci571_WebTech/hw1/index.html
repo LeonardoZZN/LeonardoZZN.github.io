@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>CSCI571-HW1</title>
-	<style>
-		body {
-			background-image: url("images/index_bk.jpg");
-			background-size: cover;
-			opacity: 0.5;
-			margin: 0;
-			padding: 0;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI571-HW1</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            overflow: hidden; 
+        }
 
-		.title {
-			text-align: center;
-			font-weight: bold;
-			font-size: 24px;
-			margin-bottom: 20px;
-		}
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-		.tab-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 20px;
-		}
+        #title {
+            font-size: 2em; /* Adjust title size as needed */
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem; /* Add spacing below title */
+        }
 
-		.blob {
-			position: relative;
-			width: 200px;
-			height: 50px;
-			border-radius: 10px;
-			border: 2px solid #333;
-			background-color: rgba(0, 0, 0, 0.5);
-			padding: 10px;
-			margin-bottom: 20px;
-		}
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; /* Center tabs horizontally */ 
+            width: 100%; 
+        }
 
-		.blob:hover {
-			cursor: pointer;
-		}
+        .tab {
+            background-color: transparent;
+            border: 3px solid white;
+            padding: 15px;
+            text-decoration: none; 
+            color: #fff; /* Adjust tab text color as needed */
+            cursor: pointer;  
+            width: 20%;
+        }
 
-		.tab-link {
-			text-decoration: none;
-			color: #fff;
-			font-weight: bold;
-		}
-	</style>
+        .tab:hover {
+            background-color: #eee;
+        } 
+
+    </style>
 </head>
 <body>
-	<div class="title">CSCI571-HW1</div>
-	<div class="tab-container">
-		<a href="HW1-a.html" class="blob tab-link" style="background-color: rgb(255, 0, 0);">
-			<b>Tab A</b>
-		</a>
-		<a href="HW1-b.html" class="blob tab-link" style="background-color: rgb(0, 255, 0);">
-			<b>Tab B</b>
-		</a>
-		<a href="HW1-c.html" class="blob tab-link" style="background-color: rgb(0, 0, 255);">
-			<b>Tab C</b>
-		</a>
-	</div>
+    <div id="container">
+        <div id="title">CSCI571-HW1</div>  
+        <div class="tab-container">
+            <a href="HW1-a.html" class="tab">HW1-a</a>
+            <a href="HW1-b.html" class="tab">HW1-b</a>
+            <a href="HW1-c.html" class="tab">HW1-c</a> 
+        </div>
+    </div>
 
+    <!--  Image Placeholder -->
+    <img src="your-image.jpg" alt="Your Image" style="width: 100%; height: 100vh; object-fit: cover; opacity: 0.5; display: block; margin: auto;">
 </body>
 </html>
